@@ -5,8 +5,24 @@
     "dbaeumer.vscode-eslint",
     "ritwickdey.LiveServer",
     "stylelint.vscode-stylelint"
+   
     // Additional Extensions Here
   ],
+   "name": "Node.js",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18-bullseye",
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/jshint:2": {}
+  },
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "npm install",
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "streetsidesoftware.code-spell-checker"
+      ],
   "onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc", //Set Terminal Prompt to $
   "postAttachCommand": "git pull --all"  
 }
