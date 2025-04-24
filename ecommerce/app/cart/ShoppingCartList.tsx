@@ -8,7 +8,7 @@ export default function ShoppingCartList({ initialCartProducts }: { initialCartP
   const [cartProducts, setCartProducts] = useState(initialCartProducts);
 
   async function removeFromCart(productId: string) {
-    const response = await fetch(process.env.NEXT_PUBLIC_SITE_URL + '/api/users/2/cart', {
+    const response = await fetch(process.env.NEXT_PUBLIC_SITE_URL + '/api/users/1/cart', {
       method: 'DELETE',
       body: JSON.stringify({
         productId,
